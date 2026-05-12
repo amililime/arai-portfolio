@@ -2,23 +2,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
+  id: string;
   src: string;
   title: string;
-  slug: string;
 }
 
-export const ProjectCard = ({ src, title, slug }: Props) => (
-  <Link href={`/projects/${slug}`} className="group block">
-    <div className="relative w-full overflow-hidden bg-zinc-100" style={{ aspectRatio: "4/3" }}>
+export const ProjectCard = ({ id, src, title }: Props) => (
+  <Link href={`/project/${id}`} className="group block space-y-3">
+    <div className="relative w-full overflow-hidden bg-zinc-100" style={{ aspectRatio: '4/3' }}>
       <Image
         src={src}
         alt={title}
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+        sizes="(max-width: 768px) 100vw, 33vw"
+        className="object-cover transition-transform duration-700 group-hover:scale-105"
+        priority
       />
     </div>
-    <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-black">
+    <p className="text-[10px] uppercase tracking-[0.2em] text-black">
       {title}
     </p>
   </Link>

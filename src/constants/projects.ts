@@ -1,53 +1,48 @@
-export interface ProjectImage {
-  src: string;
-  alt?: string;
-}
-
 export interface Project {
   id: string;
   title: string;
   cover: string;
-  images: ProjectImage[];
-  category: 'commercial' | 'personal-work' | 'retouching';
-  slug: string;
+  category: string;
+  images: string[];
 }
 
 export const PROJECTS: Project[] = [
   {
-    id: 'hellofresh',
+    id: 'hello-fresh',
     title: 'Hello Fresh',
     cover: '/images/AraiMoleri_HelloFresh_1.jpg',
-    images: [
-      { src: '/images/AraiMoleri_HelloFresh_1.jpg' },
-      { src: '/images/AraiMoleri_HelloFresh_2.jpg' },
-      { src: '/images/AraiMoleri_HelloFresh_3.jpg' },
-      { src: '/images/AraiMoleri_HelloFresh_4.jpg' },
-      { src: '/images/AraiMoleri_HelloFresh_5.jpg' },
-      { src: '/images/AraiMoleri_HelloFresh_6.jpg' },
-      { src: '/images/AraiMoleri_HelloFresh_7.jpg' },
-      { src: '/images/AraiMoleri_HelloFresh_8.jpg' },
-    ],
     category: 'commercial',
-    slug: 'hellofresh',
+    images: [
+      '/images/AraiMoleri_HelloFresh_1.jpg',
+      '/images/AraiMoleri_HelloFresh_2.jpg',
+      '/images/AraiMoleri_HelloFresh_3.jpg',
+      '/images/AraiMoleri_HelloFresh_4.jpg',
+      '/images/AraiMoleri_HelloFresh_5.jpg',
+      '/images/AraiMoleri_HelloFresh_6.jpg',
+      '/images/AraiMoleri_HelloFresh_7.jpg',
+      '/images/AraiMoleri_HelloFresh_8.jpg',
+    ],
   },
   {
     id: 'sinfonia',
     title: 'Sinfonía',
     cover: '/images/AraiMoleri_Sinfonia_1.jpg',
-    images: [
-      { src: '/images/AraiMoleri_Sinfonia_1.jpg' },
-    ],
     category: 'commercial',
-    slug: 'sinfonia',
+    images: [
+      '/images/AraiMoleri_Sinfonia_1.jpg',
+      '/images/AraiMoleri_Sinfonia_2.jpg',
+      '/images/AraiMoleri_Sinfonia_3.jpg',
+      '/images/AraiMoleri_Sinfonia_4.jpg',
+      '/images/AraiMoleri_Sinfonia_5.jpg',
+    ],
   },
   {
-    id: 'viaaqua',
+    id: 'via-aqua',
     title: 'Via Aqua',
     cover: '/images/AraiMoleri_ViaAqua_1.jpg',
-    images: [
-      { src: '/images/AraiMoleri_ViaAqua_1.jpg' },
-    ],
     category: 'commercial',
-    slug: 'viaaqua',
+    images: [
+      '/images/AraiMoleri_ViaAqua_1.jpg',
+    ],
   },
 ];
