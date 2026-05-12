@@ -3,12 +3,8 @@ import { PROJECTS } from "@/constants/projects";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* 
-        La clase 'p-1' genera el borde exterior.
-        La clase 'gap-1' genera las líneas finas entre las fotos.
-      */}
-      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 p-1">
+    <div className="w-full bg-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 p-1">
         {PROJECTS.map((project) => (
           <ProjectCard 
             key={project.id} 
@@ -16,7 +12,7 @@ export default function HomePage() {
             src={project.src} 
           />
         ))}
-      </main>
+      </div>
     </div>
   );
 }
