@@ -3,20 +3,17 @@ import { PROJECTS } from "@/constants/projects";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* 
-        La clase 'p-1' genera el borde exterior.
-        La clase 'gap-1' genera las líneas finas entre las fotos.
-      */}
-      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 p-1">
+    <main className="px-6 py-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
         {PROJECTS.map((project) => (
-          <ProjectCard 
-            key={project.id} 
-            title={project.title} 
-            src={project.src} 
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            src={project.cover}
+            slug={project.slug}
           />
         ))}
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }

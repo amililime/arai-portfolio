@@ -1,20 +1,25 @@
 import Image from "next/image";
+import Link from "next/link";
 
-interface Props { src: string; title: string }
+interface Props {
+  src: string;
+  title: string;
+  slug: string;
+}
 
-export const ProjectCard = ({ src, title }: Props) => (
-  <div className="group relative aspect-[3/4] w-full cursor-pointer overflow-hidden bg-zinc-100">
-    <Image
-      src={src}
-      alt={title}
-      fill
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
-    />
-    <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/10">
-      <p className="text-[10px] uppercase tracking-[0.2em] text-white opacity-0 transition-opacity group-hover:opacity-100">
-        {title}
-      </p>
+export const ProjectCard = ({ src, title, slug }: Props) => (
+  <Link href={`/projects/${slug}`} className="group block">
+    <div className="relative w-full overflow-hidden bg-zinc-100" style={{ aspectRatio: "4/3" }}>
+      <Image
+        src={src}
+        alt={title}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+      />
     </div>
-  </div>
+    <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-black">
+      {title}
+    </p>
+  </Link>
 );
