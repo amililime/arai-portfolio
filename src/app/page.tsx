@@ -8,9 +8,9 @@ export default function HomePage() {
         {PROJECTS.map((project) => (
           <ProjectCard
             key={project.id}
+            id={project.id}
             title={project.title}
             src={project.cover}
-            slug={project.slug}
           />
         ))}
       </div>

@@ -15,9 +15,9 @@ export default async function CategoryPage({
         {filtered.map((project) => (
           <ProjectCard
             key={project.id}
+            id={project.id}
             title={project.title}
             src={project.cover}
-            slug={project.slug}
           />
         ))}
       </div>
