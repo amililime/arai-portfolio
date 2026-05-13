@@ -24,13 +24,26 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
+    id: 'nina-hauzer-yayoi',
+    title: 'Nina Hauzer Yayoi',
+    cover: '/images/AraiMoleri_NinaHauzerYayoi_1.jpg',
+    category: 'commercial',
+    images: [
+      '/images/AraiMoleri_NinaHauzerYayoi_1.jpg',
+      '/images/AraiMoleri_NinaHauzerYayoi_2.jpg',
+      '/images/AraiMoleri_NinaHauzerYayoi_3.jpg',
+      '/images/AraiMoleri_NinaHauzerYayoi_4.jpg',
+      '/images/AraiMoleri_NinaHauzerYayoi_5.jpg',
+    ],
+  },
+  {
     id: 'sinfonia',
     title: 'Sinfonía',
     cover: '/images/AraiMoleri_Sinfonia_1.jpg',
     category: 'commercial',
     images: [
       '/images/AraiMoleri_Sinfonia_1.jpg',
-      '/images/AraiMoleri_Sinfonia_2.jpg',
+      '/images/AraiMoleri_Sinfonia_2.jpeg',
       '/images/AraiMoleri_Sinfonia_3.jpg',
       '/images/AraiMoleri_Sinfonia_4.jpg',
       '/images/AraiMoleri_Sinfonia_5.jpg',
