@@ -5,9 +5,10 @@ interface Props {
   id: string;
   src: string;
   title: string;
+  priority?: boolean;
 }
 
-export const ProjectCard = ({ id, src, title }: Props) => {
+export const ProjectCard = ({ id, src, title, priority = false }: Props) => {
   return (
     <Link href={`/project/${id}`} className="group block space-y-3">
       <div className="relative aspect-4/3 w-full overflow-hidden bg-zinc-100">
@@ -16,6 +17,8 @@ export const ProjectCard = ({ id, src, title }: Props) => {
           alt={title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          priority={priority}
+          fetchPriority={priority ? 'high' : 'auto'}
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
       </div>

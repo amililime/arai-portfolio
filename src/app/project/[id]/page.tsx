@@ -42,6 +42,7 @@ export default async function ProjectPage({ params }: Props) {
             height={0}
             sizes="100vw"
             priority={index === 0}
+            fetchPriority={index === 0 ? 'high' : 'auto'}
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
         ))}

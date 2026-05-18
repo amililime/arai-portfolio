@@ -10,6 +10,9 @@ export default function AboutPage() {
           alt="Araí Moleri"
           width={800}
           height={1000}
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          priority
+          fetchPriority="high"
           className="grayscale hover:grayscale-0 transition-all duration-700 object-cover"
         />
       </div>
